@@ -1,60 +1,133 @@
 ﻿using System;
-//Starter koden
-// initialize variables - graded assignments 
-int currentAssignments = 5;
+internal class Program
+{
+    private static void Main(string[] args)
+    {
+        //Starter koden
+        // initialize variables - graded assignments 
+        int currentAssignments = 5;
 
-int sophia1 = 90;
-int sophia2 = 86;
-int sophia3 = 87;
-int sophia4 = 98;
-int sophia5 = 100;
+        string[] studentNames = { "Sophia", "Andrew", "Emma", "Logan" };
 
-int andrew1 = 92;
-int andrew2 = 89;
-int andrew3 = 81;
-int andrew4 = 96;
-int andrew5 = 90;
+        int[] sophiaPoints = { 90, 86, 87, 98, 100 };
+        int[] andrewPoints = { 92, 89, 81, 96, 90 };
+        int[] emmaPoints = { 90, 85, 87, 98, 68 };
+        int[] loganPoints = { 90, 95, 87, 88, 96 };
 
-int emma1 = 90;
-int emma2 = 85;
-int emma3 = 87;
-int emma4 = 98;
-int emma5 = 68;
+        int sophiaSum = 0;
+        int andrewSum = 0;
+        int emmaSum = 0;
+        int loganSum = 0;
 
-int logan1 = 90;
-int logan2 = 95;
-int logan3 = 87;
-int logan4 = 88;
-int logan5 = 96;
+        foreach (int i in sophiaPoints)
+        {
+            sophiaSum += i;
+        }
 
-int sophiaSum = 0;
-int andrewSum = 0;
-int emmaSum = 0;
-int loganSum = 0;
+        foreach (int i in andrewPoints)
+        {
+            andrewSum += i;
+        }
 
-decimal sophiaScore;
-decimal andrewScore;
-decimal emmaScore;
-decimal loganScore;
+        foreach (int i in emmaPoints)
+        {
+            emmaSum += i;
+        }
 
-sophiaSum = sophia1 + sophia2 + sophia3 + sophia4 + sophia5;
-andrewSum = andrew1 + andrew2 + andrew3 + andrew4 + andrew5;
-emmaSum = emma1 + emma2 + emma3 + emma4 + emma5;
-loganSum = logan1 + logan2 + logan3 + logan4 + logan5;
+        foreach (int i in loganPoints)
+        {
+            loganSum += i;
+        }
 
-sophiaScore = (decimal)sophiaSum / currentAssignments;
-andrewScore = (decimal)andrewSum / currentAssignments;
-emmaScore = (decimal)emmaSum / currentAssignments;
-loganScore = (decimal)loganSum / currentAssignments;
+        decimal sophiaScore = (decimal)sophiaSum / currentAssignments;
+        decimal andrewScore = (decimal)andrewSum / currentAssignments;
+        decimal emmaScore = (decimal)emmaSum / currentAssignments;
+        decimal loganScore = (decimal)loganSum / currentAssignments;
 
-Console.WriteLine("Student\t\tGrade\n");
-Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA-");
-Console.WriteLine("Andrew:\t\t" + andrewScore + "\tB+");
-Console.WriteLine("Emma:\t\t" + emmaScore + "\tB");
-Console.WriteLine("Logan:\t\t" + loganScore + "\tA-");
+        string currentStudentGrade = "";
 
-Console.WriteLine("Press the Enter key to continue");
-Console.ReadLine();
+        Console.WriteLine("Student\t\tGrade\n");
+
+        foreach (string student in studentNames)
+        {
+            decimal currentStudentScore = 0;
+
+            if (student == "Sophia")
+            {
+                currentStudentScore = sophiaScore;
+            }
+            else if (student == "Andrew")
+            {
+                currentStudentScore = andrewScore;
+            }
+            else if (student == "Emma")
+            {
+                currentStudentScore = emmaScore;
+            }
+            else if (student == "Logan")
+            {
+                currentStudentScore = loganScore;
+            }
+
+            if (currentStudentScore >= 97) {
+                currentStudentGrade = "A+";
+            }
+            else if (currentStudentScore >= 93)
+            {
+                currentStudentGrade = "A";
+            }
+            else if (currentStudentScore >= 90)
+            {
+                currentStudentGrade = "A-";
+            }
+            else if (currentStudentScore >= 87)
+            {
+                currentStudentGrade = "B+";
+            }
+            else if (currentStudentScore >= 83)
+            {
+                currentStudentGrade = "B";
+            }
+            else if (currentStudentScore >= 80)
+            {
+                currentStudentGrade = "B-";
+            }
+            else if (currentStudentScore >= 77)
+            {
+                currentStudentGrade = "C+";
+            }
+            else if (currentStudentScore >= 73)
+            {
+                currentStudentGrade = "C";
+            }
+            else if (currentStudentScore >= 70)
+            {
+                currentStudentGrade = "C-";
+            }
+            else if (currentStudentScore >= 67)
+            {
+                currentStudentGrade = "D+";
+            }
+            else if (currentStudentScore >= 63)
+            {
+                currentStudentGrade = "D";
+            }
+            else if (currentStudentScore >= 60)
+            {
+                currentStudentGrade = "D-";
+            }
+            else
+            {
+                currentStudentGrade = "F";
+            }
+
+            Console.WriteLine($"{student}:\t\t" + currentStudentScore + $"\t{currentStudentGrade}");
+        }
+
+        Console.WriteLine("Press the Enter key to continue");
+        Console.ReadLine();
+    }
+}
 
 
 
