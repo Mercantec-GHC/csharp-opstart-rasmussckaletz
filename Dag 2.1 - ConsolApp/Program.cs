@@ -264,7 +264,7 @@ internal class Program
         }*/
 
 
-        string str = "The quick brown fox jumps over the lazy dog.";
+        /*string str = "The quick brown fox jumps over the lazy dog.";
         // convert the message into a char array
         char[] charMessage = str.ToCharArray();
         // Reverse the chars
@@ -276,7 +276,29 @@ internal class Program
         string new_message = new string(charMessage);
         // print it out
         Console.WriteLine(new_message);
-        Console.WriteLine($"'o' appears {x} tiems.");
+        Console.WriteLine($"'o' appears {x} tiems.");*/
+
+
+
+        /*string originalMessage = "The quick brown fox jumps over the lazy dog.";
+
+        char[] message = originalMessage.ToCharArray();
+        Array.Reverse(message);
+
+        int letterCount = 0;
+
+        foreach (char letter in message)
+        {
+            if (letter == 'o')
+            {
+                letterCount++;
+            }
+        }
+
+        string newMessage = new string(message);
+
+        Console.WriteLine(newMessage);
+        Console.WriteLine($"'o' appears {letterCount} times.");*/
 
 
     }
