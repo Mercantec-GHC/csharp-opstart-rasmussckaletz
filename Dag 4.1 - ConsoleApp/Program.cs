@@ -419,7 +419,7 @@
         message = message.Replace("-", "");
         Console.WriteLine(message);*/
 
-        const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
+        /*const string input = "<div><h2>Widgets &trade;</h2><span>5000</span></div>";
 
         
         string openingSpan = "<span>";
@@ -442,9 +442,6 @@
 
 
         Console.WriteLine("Quantity: " + quantity);
-        Console.WriteLine("Output: " + output);
-
-
-        //Console.WriteLine(message.Substring(openingPosition, length)); */
+        Console.WriteLine("Output: " + output);*/
     }
 }
